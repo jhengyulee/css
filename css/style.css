@@ -1,0 +1,78 @@
+*{
+    box-sizing: border-box; 
+    font-family: '標楷體';
+    overflow: hidden;
+}
+
+.main{
+    display: flex;
+    width: 1024px;
+    padding: 0 12px;
+    margin: 10px auto;/*margin要設定才會置中 */
+    text-align: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+body>*:not(aside,section) , 
+aside>* , 
+/* .top  , .menu , .update , .marqee , .content , .footer{
+    border: 1px solid lightgray  */
+
+section>*{
+    border: 1px solid lightgray;
+}
+
+.top{
+    flex-basis: 1000px;
+    height: 65px;
+    background-color: blueviolet;
+}
+
+
+.aside{
+    flex-basis: 215px;
+    height: calc(768px - 65px - 20px);
+    display: flex;
+    flex-direction: column;
+    background-color: antiquewhite;
+}
+.menu{
+    flex-basis: calc(100% - 25px);
+}
+.update{
+flex-basis: 25px;
+font-family: '標楷體';
+color: #000000;
+text-align: center;
+font-size: 16px;
+}
+
+
+.section{
+    flex-basis: calc(1000px - 215px);
+    display: flex;
+    flex-direction: column;
+    background-color: aquamarine;
+}
+.marqee{
+    flex-basis: 29px;
+    padding: 0 calc((100% - 770px - 2px)/2);
+    font-family: '標楷體';
+    font-size: 24px;
+    color: #0000FF;
+}
+.content{
+    flex-basis:calc(100% - 29px) ;
+}
+
+
+.footer{
+    flex-basis: 1000px;
+    height: 20px;
+    font-family: '標楷體';
+    color: #000000;
+    text-align: center;
+    font-size: 16px;   
+    background-color: lightgoldenrodyellow;
+}

@@ -5,7 +5,7 @@
 }
 
 .main{
-    display: flex;
+    display: flex; /*宣告:hello 我要你是flexbox*/
     width: 1024px;
     padding: 0 12px;
     margin: 10px auto;/*margin要設定才會置中 */
@@ -26,7 +26,7 @@ section>*{
 .top{
     flex-basis: 1000px;
     height: 65px;
-    background-color: blueviolet;
+    
 }
 
 
@@ -35,11 +35,38 @@ section>*{
     height: calc(768px - 65px - 20px);
     display: flex;
     flex-direction: column;
-    background-color: antiquewhite;
+    
 }
 .menu{
     flex-basis: calc(100% - 25px);
 }
+.menu-header{
+    font-weight: 500;
+    font-size: 24px;
+    color:#FF00FF;
+    margin: 20px auto;
+}
+
+.menu>a{
+
+    color: #000000;
+    font-size: 16px;
+    /* block 斷行 可調寬高 */
+    /* inline-block 不可斷行 可調寬高 */
+    display: inline-block; /*用block會導致背景黏在一起*/ 
+    text-decoration: none;
+    background-image: url(../images/menu1.png);/*原本位置:CSS資料夾,用../回上一層*/
+    background-repeat: no-repeat;/*避免背景圖自動裁切重複顯示*/ 
+    width: 200px;
+    height: 35px;
+    padding-top: 10px;
+    /* line-height: 35px; */   
+}
+
+.menu>a:hover{
+    background: url(../images/menu2.png) no-repeat/*一樣用../回上一層資料夾*/
+}
+
 .update{
 flex-basis: 25px;
 font-family: '標楷體';
@@ -50,22 +77,26 @@ font-size: 16px;
 
 
 .section{
-    flex-basis: calc(1000px - 215px);
     display: flex;
     flex-direction: column;
-    background-color: aquamarine;
+    flex-basis: calc(1000px - 215px);
+    
 }
-.marqee{
+.marquee{
     flex-basis: 29px;
-    padding: 0 calc((100% - 770px - 2px)/2);
+    padding: 0 calc((100% - 770px - 2px)/2); /*因為border=1px*/
     font-family: '標楷體';
     font-size: 24px;
     color: #0000FF;
 }
 .content{
     flex-basis:calc(100% - 29px) ;
+    
 }
-
+.content>iframe{
+    width: 100%;
+    height: 100%;
+}
 
 .footer{
     flex-basis: 1000px;
